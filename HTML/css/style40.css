@@ -1,0 +1,193 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.layout-plants {
+    background-color: #F8FBF9;
+    width: 100%;
+    max-width: 1200px;
+    border-radius: 40px;
+    padding: 60px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.hero-bg {
+    position: absolute;
+    top: -100px;
+    left: -100px;
+    width: 500px;
+    height: 500px;
+    background-color: #D6EDE2;
+    border-radius: 50%;
+    filter: blur(40px);
+    z-index: 0;
+    opacity: 0.7;
+}
+
+.hero-text {
+    flex: 1;
+    z-index: 1;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    color: #333;
+    line-height: 1.2;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+.text-accent {
+    color: #4A7729; 
+}
+
+.hero-description {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 450px;
+    margin-bottom: 40px;
+}
+
+.hero-buttons {
+    position: relative;
+    width: fit-content;
+}
+
+.button-primary {
+    background-color: #333;
+    color: white;
+    padding: 18px 45px;
+    border-radius: 40px;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+}
+
+.button-overlay {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 100%;
+    height: 100%;
+    background-color: #111;
+    border-radius: 40px;
+    z-index: 1;
+}
+
+.hero-visual {
+    position: relative;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.hero-arch {
+    position: absolute;
+    bottom: 0;
+    width: 350px;
+    height: 500px;
+    background-color: #D6EDE2;
+    border-radius: 200px 200px 0 0;
+    z-index: 0;
+}
+
+.plant-main {
+    width: 392px; 
+    height: 686px; 
+    object-fit: contain;
+    position: relative;
+    z-index: 1;
+}
+
+.plant-badge {
+    position: absolute;
+    width: 191px;
+    height: 194px; 
+    z-index: 3;
+}
+
+.badge-1 { top: 10%; right: -20px; }
+.badge-2 { bottom: 20%; left: 0; }
+
+.products-section {
+    border: 1px solid #CCC;
+    border-radius: 30px;
+    display: flex;
+    padding: 30px;
+    gap: 40px;
+}
+
+.product-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex: 1;
+}
+
+.product-image {
+    width: 160px; 
+    height: 160px; 
+    border-radius: 30px;
+    object-fit: cover;
+}
+
+.product-info p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+@media (max-width: 1024px) {
+    .hero-section { 
+        flex-direction: column; 
+        text-align: center; 
+    }
+
+    .hero-text { 
+        margin-bottom: 50px; 
+        display: flex; 
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .products-section { 
+        flex-direction: column; 
+    }
+
+    .plant-main { 
+        width: 100%; 
+        height: auto; 
+        max-width: 350px; 
+    }
+
+    .plant-badge { 
+        width: 120px; 
+        height: auto; 
+    }
+}

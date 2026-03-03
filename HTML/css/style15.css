@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffffff;
+    color: #2D3A35;
+    overflow-x: hidden;
+    line-height: 1.5;
+}
+
+.layout-nature {
+    width: 95%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px 0;
+    gap: 30px;
+    position: relative;
+}
+
+.column {
+    flex: 1;
+    max-width: 380px;
+    display: flex;
+    flex-direction: column;
+}
+
+.column-left {
+    justify-content: space-between;
+    min-height: 750px;
+}
+
+.column-right {
+    justify-content: flex-end;
+    min-height: 750px;
+}
+
+.column-center {
+    position: relative;
+    flex: 0 0 416px;
+}
+
+h1, h2 {
+    font-family: serif;
+    font-weight: 400;
+    line-height: 1.1;
+    color: #2D3A35;
+}
+
+h1 {
+    font-size: clamp(3rem, 5vw, 4.5rem);
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: clamp(3rem, 5vw, 4.5rem);
+    margin-top: 30px;
+}
+
+p {
+    font-size: 1rem;
+    color: #555;
+    max-width: 320px;
+    margin-bottom: 25px;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.button-primary {
+    background-color: #4E7D63;
+    color: #ffffff;
+    padding: 16px 40px;
+    border-radius: 50px;
+    border: none;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: fit-content;
+    margin-bottom: 40px;
+}
+
+.button-primary:hover {
+    background-color: #3d634e;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(78, 125, 99, 0.3);
+}
+
+.main-image {
+    width: 416px;
+    height: 706px;
+    border-radius: 208px;
+    object-fit: cover;
+    display: block;
+}
+
+.side-image {
+    width: 380px;
+    height: auto;
+    object-fit: contain;
+}
+
+.decor-star {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    z-index: 5;
+}
+
+.star-top {
+    top: -30px;
+    right: 40px;
+}
+
+.star-middle {
+    position: relative;
+    margin: 20px 0;
+}
+
+@media (max-width: 1200px) {
+
+    .layout-nature {
+        flex-direction: column;
+        text-align: center;
+        padding: 60px 20px;
+        gap: 80px;
+    }
+
+    .hero-content,
+    .right-content {
+        align-items: center;
+    }
+
+    .column {
+        max-width: 100%;
+        flex: none;
+    }
+
+    .column-left,
+    .column-right {
+        min-height: auto;
+    }
+
+    .star-top {
+        right: 0;
+        top: -50px;
+    }
+}

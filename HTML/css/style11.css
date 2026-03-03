@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    background-color: #ffffff;
+    color: #1a1a1a;
+    overflow-x: hidden;
+}
+
+
+
+.layout-eleven {
+    width: 90%;
+    max-width: 1300px;
+    margin: 60px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+
+
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 25px;
+    max-width: 500px;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 35px;
+    max-width: 450px;
+}
+
+.primary-button {
+    background-color: #262626;
+    color: #ffffff;
+    padding: 15px 40px;
+    border-radius: 50px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+
+.hero-images {
+    flex: 1;
+    position: relative;
+    width: 100%;
+    max-width: 548px;
+}
+
+.hero-composition {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+.dark-banner {
+    background-color: #262626;
+    border-radius: 40px;
+    padding: 60px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+}
+
+.feature-card {
+    color: #ffffff;
+}
+
+.feature-card img {
+    width: 24px;
+    height: 16px;
+    margin-bottom: 20px;
+    opacity: 0.8;
+}
+
+.feature-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.feature-card p {
+    font-size: 1rem;
+    color: #cccccc;
+    line-height: 1.4;
+}
+
+
+@media (min-width: 992px) {
+    
+    .hero-section {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
+
+    .dark-banner {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 60px;
+    }
+
+    .hero-content h1 {
+        font-size: 4.5rem;
+    }
+}
